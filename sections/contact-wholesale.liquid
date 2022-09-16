@@ -42,7 +42,9 @@
         {%- endif -%}
       </div>
       <div class="grid__item medium-up--one-half">
-        <label for="{{ formId }}-email">Business Name </label>
+<label for="{{ formId }}-email">{{ "customization.wholesale.business_name"| t }}
+</label>
+
         <input
           type="email"
           id="{{ formId }}-email"
@@ -67,7 +69,7 @@
         {%- endif -%}
       </div>
       <div class="grid__item medium-up--one-half">
-        <label for="{{ formId }}-email">Website </label>
+        <label for="{{ formId }}-email">{{"customization.wholesale.website"| t}} </label>
         <input
           type="email"
           id="{{ formId }}-email"
@@ -93,7 +95,8 @@
       </div>
     </div>
     {% unless section.settings.businessChoice == blank %}
-      <label for="{{formId}}-business-type">Type of business</label>
+<label for="{{ formId }}-business-type">{{ "customization.wholesale.type_of_business" | t }} </label>
+
 
       <select id="{{ formId }}-business-type" name="contact[Type of Business]">
         {% assign type-of-business = section.settings.businessChoice | split: ',' %}

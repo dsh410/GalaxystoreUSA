@@ -1,28 +1,59 @@
-<h1>{{section.settings.heading}}</h1>
-<h3>{{section.settings.questions}}</h3>
-<p>{{section.settings.answer}}</p>
+<h1>{{ section.settings.heading }}</h1>
 
+{% for block in section.blocks %}
+  {% if block.type == 'QA' %}
+<h1>{{ block.settings.title }}</h1>
 
+    <h3>{{ block.settings.questions }}</h3>
+    <p>{{ block.settings.answer }}</p>
+    {% elsif block.type == "headline" %}
+    <h1>{{ block.settings.title }}</h1>
+  {% endif %}
+{% endfor %}
 
 {% schema %}
 {
-    "name":"customer questions",
-    "settings":[
-        {
-            "type": "text",
-            "label":"heading for faq",
-            "id":"heading"
+  "name": "customer questions",
+  "settings": [
+    {
+      "type": "text",
+      "label": "heading for faq",
+      "id": "heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "QA",
+      "name": " Questions/Answers",
+      "settings": [
+         {
+          "type": "text",
+          "label": "QA Tilte",
+          "id": "title"
         },
         {
-            "type": "text",
-            "label":"customer questions",
-            "id":"questions"
+          "type": "text",
+          "label": "customer questions",
+          "id": "questions"
         },
         {
-            "type": "textarea",
-            "label":"customer answer",
-            "id":"answer"
+          "type": "textarea",
+          "label": "customer answer",
+          "id": "answer"
         }
-    ]
+      ]
+    },
+    {
+      "type": "headline",
+      "name": "headline",
+      "settings": [
+        {
+          "type": "text",
+          "label": "headline",
+          "id": "title"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
