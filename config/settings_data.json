@@ -32,7 +32,7 @@
           "title": "Image with text overlay",
           "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
           "button_label": "Shop Now",
-          "button_link": "shopify:\/\/products\/galaxy-box™️"
+          "button_link": "shopify:\/\/products\/galaxy-box"
         }
       },
       "feature-row": {
@@ -369,9 +369,7 @@
       "faq": {
         "type": "faq",
         "settings": {
-          "heading": "YOUR QUESTION ANSWERED",
-          "questions": "How long does shipping take?",
-          "answer": "usually it takes 3-5 business days."
+          "heading": "YOUR QUESTION ANSWERED"
         }
       },
       "contact": {
