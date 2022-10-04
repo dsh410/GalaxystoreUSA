@@ -6996,3 +6996,7 @@ hr {
 
 .store-availability-list__phone {
   margin-bottom: 0; }
+
+  .jdgm-histogram__bar-content{
+    background: #EA1F06 !important;
+  }
