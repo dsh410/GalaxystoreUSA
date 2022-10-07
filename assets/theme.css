@@ -7000,3 +7000,45 @@ hr {
   .jdgm-histogram__bar-content{
     background: #EA1F06 !important;
   }
+
+
+  .container {
+            width: 80%;
+            height: 50%;
+            margin: 0 auto;
+        }
+        .selector {
+            display: flex;
+            border-bottom: 1px solid grey;  
+        }
+        .tab {
+            padding: 5px 5px 0px 5px;
+            margin-bottom: 10px;
+           
+        }
+        .tab:hover {
+            cursor: pointer;
+          
+        }
+        .content {
+            padding: 10px;
+        }
+        .content-body {
+            display: none;
+        }
+        .show-active {
+            display: block;
+            animation: fade 1s;
+        }
+        .tab-active {
+            /* background-color: darkgrey; */
+            border-bottom: 1px solid black;
+        }
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity:1;
+            }
+        }

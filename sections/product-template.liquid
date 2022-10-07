@@ -268,10 +268,53 @@
           data-base-url="{{ shop.url }}{{ routes.root_url }}"
         >
         </div>
-
-        <div class="product-single__description rte">
-          {{ product.description }}
+    
+<div class="container">
+    <div class="selector">
+        <div class="tab tab-active">
+            Description
         </div>
+{% unless product.metafields.details.description == blank %}
+        <div class="tab">
+            Details
+        </div>
+        {%endunless%}
+        <div class="tab">
+            Shipping
+        </div>
+    </div>
+    <div class="content">
+        <div id="Description" class="content-body show-active">
+<div class="product-single__description rte">
+    {{ product.description }}
+</div>
+
+        </div>
+
+{% unless product.metafields.details.description == blank %}
+        <div id="Details" class="content-body">
+
+
+{{product.metafields.details.description}}
+
+
+</div>
+{%endunless%}
+
+
+
+      
+        <div id="Shipping" class="content-body">
+        {{product.metafields.shipping.description}}
+            
+        </div>
+    </div>
+</div>
+
+
+        {% comment %} <div class="product-single__description rte">
+          {{ product.description }}
+        </div> {% endcomment %}
 
         {% if section.settings.show_share_buttons %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
