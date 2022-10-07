@@ -425,6 +425,12 @@
       "website": "Business Website",
       "business_name": "company",
       "type_of_business": "business type"
+    },
+    "product_tabs":{
+"product_Description":"Description",
+"product_Details":"Details",
+"product_Shipping":"Shipping"
+
     }
   }
 }
